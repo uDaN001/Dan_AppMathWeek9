@@ -6,60 +6,43 @@ using System.Runtime.CompilerServices;
 
 public class ItemSpawner : MonoBehaviour
 {
-    public Item itemToSpawn;
-    public float speed = 0.01f;
-    public List<Item> items = new List<Item>();
-    public Transform parent;
-    public float maxHorizontal;
-    public float minHorizontal;
-    public float maxVertical;
-    public float minVertical;
+    public Item obstaclePrefab;
+    public Transform parentCanvasOrWorld;
+    public float spawnInterval = 0.8f;
+    public float obstacleSpeed = 60f;
+    public float startSpawnZ = 200f;
+
+    private float timer = 0f;
+    private PlayerController player;
 
     private void Start()
     {
-        InvokeRepeating(nameof(BeginSpawn), 1, 0.3f);
-    }
-
-    private void BeginSpawn()
-    {
-        var spawnedItem = Instantiate(itemToSpawn, parent);
-        spawnedItem.itemPosition = GetRandomLocation();
-        items.Add(spawnedItem);
-    }
-
-    private Vector3 GetRandomLocation()
-    {
-        var xRand = Random.Range(minHorizontal, maxHorizontal);
-        var yRand = Random.Range(minVertical, maxVertical);
-        return new Vector3(xRand, yRand, 0);
+        player = FindFirstObjectByType<PlayerController>();
     }
 
     private void Update()
     {
-        foreach (var item in items)
+        timer += Time.deltaTime;
+        if (timer >= spawnInterval)
         {
-            ItemMover(item);
-        }
-
-
-        transform.position = GetRandomLocation();
-        List<Transform> children = new List<Transform>();
-        foreach (Transform child in transform)
-        {
-            children.Add(child);
-        }
-        children.OrderBy(x => x.position.z);
-
-        for (int i = 0; i < children.Count; i++)
-        {
-            children[i].SetSiblingIndex(i);
+            SpawnObstacle();
+            timer = 0f;
         }
     }
 
-    private void ItemMover(Item item)
+    private void SpawnObstacle()
     {
-        item.itemPosition.z += speed;
-    }
+        if (player == null) return;
 
+        // Pick a random lane (0, 1, or 2)
+        int randomLane = Random.Range(0, player.laneXPositions.Length);
+        float xPos = player.laneXPositions[randomLane];
+        float yPos = player.groundY; // Spawn at ground height
+
+        Item spawned = Instantiate(obstaclePrefab, parentCanvasOrWorld);
+        spawned.itemPosition = new Vector3(xPos, yPos, startSpawnZ);
+        spawned.laneIndex = randomLane;
+        spawned.moveSpeed = obstacleSpeed;
+    }
 
 }

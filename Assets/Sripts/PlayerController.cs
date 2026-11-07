@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +21,8 @@ public class PlayerController : MonoBehaviour
     [Header("Health Settings")]
     public float maxHealth = 100f;
     public float currentHealth;
-    public Text healthUIText; 
+    public TextMeshProUGUI healthUIText; 
+  
 
     private void Start()
     {
