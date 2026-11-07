@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a98ba75bf00bc44920473a1c231481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraComponent
-  vanishingPoint: {x: 0, y: 10}
+  vanishingPoint: {x: 0, y: 12}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,104 +349,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &946811826
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 946811828}
-  - component: {fileID: 946811827}
-  m_Layer: 0
-  m_Name: ObsSpawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &946811827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946811826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74da915b9af3ba047990e35c07cb450e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
-  obstaclePrefab: {fileID: 2092228310191940697, guid: 5dd93b863f4c57945bba6701b3556233, type: 3}
-  parentCanvasOrWorld: {fileID: 946811828}
-  spawnInterval: 0.8
-  obstacleSpeed: 60
-  startSpawnZ: 200
---- !u!4 &946811828
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946811826}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &975860369
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 975860371}
-  - component: {fileID: 975860370}
-  m_Layer: 0
-  m_Name: ObsSpawner (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &975860370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975860369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74da915b9af3ba047990e35c07cb450e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
-  obstaclePrefab: {fileID: 2092228310191940697, guid: 5dd93b863f4c57945bba6701b3556233, type: 3}
-  parentCanvasOrWorld: {fileID: 975860371}
-  spawnInterval: 0.8
-  obstacleSpeed: 60
-  startSpawnZ: 200
---- !u!4 &975860371
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975860369}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -653,7 +555,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -983,9 +885,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
   obstaclePrefab: {fileID: 2092228310191940697, guid: 5dd93b863f4c57945bba6701b3556233, type: 3}
   parentCanvasOrWorld: {fileID: 2013833571}
-  spawnInterval: 0.8
+  minSpawnInterval: 0.5
+  maxSpawnInterval: 1.5
   obstacleSpeed: 60
   startSpawnZ: 200
+  yPos: 0
+  speedMultiplier: 1.5
+  intervalScalingMultiplier: 0.05
 --- !u!4 &2013833571
 Transform:
   m_ObjectHideFlags: 0
@@ -1074,5 +980,3 @@ SceneRoots:
   - {fileID: 1638378005}
   - {fileID: 1703174087}
   - {fileID: 2013833571}
-  - {fileID: 946811828}
-  - {fileID: 975860371}
