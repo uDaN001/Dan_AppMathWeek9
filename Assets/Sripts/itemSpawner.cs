@@ -65,6 +65,7 @@ public class ItemSpawner : MonoBehaviour
 
         Item spawned = Instantiate(obstaclePrefab, parentCanvasOrWorld);
         spawned.itemPosition = new Vector3(xPos, yPos, startSpawnZ);
+        spawned.spawnZ = startSpawnZ;
         spawned.laneIndex = randomLane;
         spawned.moveSpeed = obstacleSpeed;
     }

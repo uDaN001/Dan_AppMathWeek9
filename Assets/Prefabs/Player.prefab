@@ -50,9 +50,9 @@ MonoBehaviour:
   - 0
   - 3
   laneChangeSpeed: 10
-  jumpForce: 8
-  gravity: -20
-  groundY: -2
+  jumpForce: 10
+  gravity: -16
+  groundY: -3.5
   maxHealth: 100
   currentHealth: 0
   healthUIText: {fileID: 0}
@@ -135,10 +135,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 15
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.024614096, a: 1}
+  m_Color: {r: 0, g: 0.6795902, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

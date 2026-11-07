@@ -48,7 +48,7 @@ MonoBehaviour:
   itemPosition: {x: 0, y: 0, z: 0}
   laneIndex: 0
   moveSpeed: 50
-  isCollectedOrHit: 0
+  isHit: 0
 --- !u!1 &5116707390318240743
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.066037595, b: 0.066037595, a: 1}
+  m_Color: {r: 0.72470933, g: 0.06666666, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

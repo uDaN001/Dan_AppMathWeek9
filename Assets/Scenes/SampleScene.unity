@@ -920,6 +920,18 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1697482318712925151, guid: 45000becaf6cbbe44b46f96e2111a2a2, type: 3}
+      propertyPath: gravity
+      value: -24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697482318712925151, guid: 45000becaf6cbbe44b46f96e2111a2a2, type: 3}
+      propertyPath: groundY
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697482318712925151, guid: 45000becaf6cbbe44b46f96e2111a2a2, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697482318712925151, guid: 45000becaf6cbbe44b46f96e2111a2a2, type: 3}
       propertyPath: healthUIText
       value: 
       objectReference: {fileID: 1099367019}
