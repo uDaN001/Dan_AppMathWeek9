@@ -102,7 +102,10 @@ public class PlayerController : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("Game Over!");
-           
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.GameOver();
+            }
         }
     }
 

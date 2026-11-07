@@ -90,8 +90,12 @@ public class Item : MonoBehaviour
         }
         else if (itemPosition.z <= -0.1f && !isHit)
         {
-            // Successfully evaded!
             isHit = true;
+
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.AddPoints(10);
+            }
         }
     }
 }
